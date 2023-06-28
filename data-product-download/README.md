@@ -28,9 +28,6 @@ pip install -r requirements.txt
 ## Download Data
 PRODUCT_URL
 
-### Notebook
-For a more detail description of how the api works, you run the notebook [download-data.ipynb](https://github.com/amplifydata/amplifydata-public/blob/main/data-product-download/download-data.ipynb).
-
 ### Script 
 If you want to just get the data, You can run the following command.
 **Replace the `--api_url` arg with the `PRODUCT_URL` provided in the subscription card. 
@@ -40,3 +37,7 @@ python get_product_data.py \
     --api_url "https://dev.amplifydata.io/external-api/v2/products/b16f31fd-41e1-4dd9-839d-f67d06af95c0/files" \
     --download_dir data_dir
 ```
+
+### Notebook
+For a more detail description of how the api works, you run the notebook [download-data.ipynb](https://github.com/amplifydata/amplifydata-public/blob/main/data-product-download/download-data.ipynb).
+
