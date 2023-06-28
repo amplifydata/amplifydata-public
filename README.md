@@ -14,7 +14,7 @@ Currently, you can use the api to
 ## Generating an API key
 All use of the API requires an API key to authenticate all requests. 
 
-**directions on api key creation**
+>>>>**INSERTdirections on api key creation**<<<<
 
 ## API Operations
 
