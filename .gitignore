@@ -1,3 +1,4 @@
 
 data-product-download/.env
 *.csv
+*-checkpoint.ipynb
