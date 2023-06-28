@@ -1,21 +1,23 @@
-# Welcome to Amplify Data
+# amplifydata-public
 
-This repo is where you will find info to interact with Amplify's systems
+## What is it? 
+
+This repo holds directions and utilities for how to interact with [Amplify Data's](https://www.amplifydata.io/) public facing utilies (like the Amplify API)
 
 # Amplify API
 
-The amplify api is a programmatic way to manage data products. 
+The Amplfiy API allows you to programmatically manage and interact with Amplify Data Products.
 
-Currently, the api can only be used to download data.
+Currently, you can use the api to 
+* [download a data product's underlying data](#Download-Data-Product-Data)
 
 ## Generating an API key
-
-To interact with any of our api endpoints, you must first create an API key
+All use of the API requires an API key to authenticate all requests. 
 
 **directions on api key creation**
 
 ## API Operations
 
-### Downloading Data Product Data 
+### Download Data Product Data 
 
-Check out the [download data notebook]() for a step by step walkthrough! 
+Check out the [download data notebook](https://github.com/amplifydata/amplifydata-public/blob/main/data-product-download/download-data.ipynb) for a step by step walkthrough! 
