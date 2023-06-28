@@ -19,6 +19,15 @@ We suggest creating a `.env` file in this directory and adding your amplify api 
 AMPLIFY_API_KEY=your-key-from-amplify
 ```
 
+## Create API Product Subscription
+
+Before accessing data related to a specific product, **you must created a product subscription for that product on the frontend**. 
+
+**insert steps on subscription creation**
+
+1. go to UI
+2. do stuff
+
 ### Python Env
 To run the python for this project, install the minimal requirements:
 ```
