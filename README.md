@@ -20,4 +20,4 @@ All use of the API requires an API key to authenticate all requests.
 
 ### Download Data Product Data 
 
-Check out the [download data notebook](https://github.com/amplifydata/amplifydata-public/blob/main/data-product-download/download-data.ipynb) for a step by step walkthrough! 
+Check out the [download product data](https://github.com/amplifydata/amplifydata-public/tree/main/data-product-download) section a step by step walkthrough! 
