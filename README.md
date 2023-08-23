@@ -42,6 +42,6 @@ print(results.json())
 for i, link in enumerate(results.json()["download_links"]):
     print(f"Downloading file {i}...")
     data = requests.get(link)
-    open(f'file-{i}.csv', 'wb').write(data.content)
+    open(f'file-{i}.csv.gz', 'wb').write(data.content)
 ```
 
