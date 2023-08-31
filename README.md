@@ -29,7 +29,7 @@ results = requests.get(url=PRODUCT_API_PATH,
 print(results.json())
 ```
 #### Results:
-```json
+```python
 {
     "download_links": [str], # list of downloadable links
     "metadata": {
@@ -57,7 +57,7 @@ for i, link in enumerate(results.json()["download_links"]):
 - `partition_key_before`: Filtering parameter to retrieve all files before the specified partition_key, inclusive
 
 #### Endpoint Results:
-```json
+```python
 {
     "download_links": [{
         "link": str, # downloadable link
