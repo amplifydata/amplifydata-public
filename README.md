@@ -7,10 +7,12 @@ This repo holds directions and utilities for how to interact with [Amplify Data'
 The Data API allows you to programmatically download data products from any data portal powered by [Amplify](https://www.amplifydata.io/). To download a data product, follow these steps:
 1. Generate an API key by creating an API Connection in the Connections tray
 2. Generate the API URL by subscribing to the data product with the API option
-3. Call the API URL with your API key to generate a list of file links
-4. Download the file(s) from the generated links 
+3. Follow instructions below to download files. For V2 URLs go to V2 section. For V3 URLs go to V3 section
 
 ## Sample Code in Python
+
+### V2 Endpoint
+
 #### Calling the API
 ```python
 import requests
