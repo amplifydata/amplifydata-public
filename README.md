@@ -7,7 +7,8 @@ This repo holds directions and utilities for how to interact with [Amplify Data'
 The Data API allows you to programmatically download data products from any data portal powered by [Amplify](https://www.amplifydata.io/). To download a data product, follow these steps:
 1. Generate an API key by creating an API Connection in the Connections tray
 2. Generate the API URL by subscribing to the data product with the API option
-3. Follow instructions below to download files. For V2 URLs go to V2 section. For V3 URLs go to V3 section
+3. Call the V2 API URL with your API key to generate a list of file links
+4. Download the file(s) from the generated links
 
 ## Sample Code in Python
 
@@ -48,6 +49,12 @@ for i, link in enumerate(results.json()["download_links"]):
 ```
 
 ### V3 Endpoint
+
+#### New in V3 - API Parameters:
+
+- `page`: Pagination parameter for the page offset number to retrieve the files for maximum of 1000 files per page, defaulted to 1.
+- `partition_key_after`: Filtering parameter to retrieve all files after the specified partition_key, inclusive
+- `partition_key_before`: Filtering parameter to retrieve all files before the specified partition_key, inclusive
 
 #### Endpoint Results:
 ```json
@@ -145,8 +152,8 @@ print(f"Successfully downloaded {download_count} files.")
 #### Filtering
 Filtering Parameters:
 
-`partition_key_after`: Retrieve all links after the specified partition_key, inclusive
-`partition_key_before`: Retrieve all links before the specified partition_key, inclusive
+- `partition_key_after`: Retrieve all links after the specified partition_key, inclusive
+- `partition_key_before`: Retrieve all links before the specified partition_key, inclusive
 
 ```python
 import requests
