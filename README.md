@@ -5,8 +5,8 @@ This repo holds directions and utilities for how to interact with [Amplify Data'
 # Data API
 
 The Data API allows you to programmatically download data products from any data portal powered by [Amplify](https://www.amplifydata.io/). To download a data product, follow these steps:
-1. Generate an API Key by creating an API Connection in the Connections tray
-2. Generate the API Endpoint by subscribing to the data product with the Connect to API option
+1. Generate an API Key by creating an API Connection in the Connections tray (be sure to save it before use) - this will look similar to `gddmanPX.jDGupTCuLR0wJXqUIe8ysakBsfHajFblQyPPLEUpFDCxGbDF2Xq4fpbb`
+2. Generate the API Endpoint by subscribing to the data product with the Connect to API option - this will look similar to `https://dev.amplifydata.io/external-api/v3/products/ec9b12fb-e306-4856-8ec2-b0b2f570e00b/files`
 3. Call the API Endpoint as needed with your API key to generate a list of file links
 4. Download the file(s) from the generated links
 
@@ -136,6 +136,7 @@ print(f"Successfully downloaded {download_count} files.")
 ```
 
 ### Legacy V2 Endpoint
+To use the v2 endpoint, change the **v3** in the API endpoint to be **v2**.  Example: `https://dev.amplifydata.io/external-api/v3/products/ec9b12fb-e306-4856-8ec2-b0b2f570e00b/files` -> `https://dev.amplifydata.io/external-api/v2/products/ec9b12fb-e306-4856-8ec2-b0b2f570e00b/files`
 
 #### Results:
 ```python
