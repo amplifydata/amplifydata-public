@@ -70,9 +70,9 @@ results = requests.get(url=PRODUCT_API_PATH,
                                })
 
 # loop through download links and save to your computer
-for i, link in enumerate(results.json()["download_links"]):
+for i, link_data in enumerate(results.json()["download_links"]):
     print(f"Downloading file {i}...")
-    data = requests.get(link)
+    data = requests.get(link_data["link"])
     open(f'file-{i}.csv.gz', 'wb').write(data.content)
 
 ```
