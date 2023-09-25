@@ -102,7 +102,7 @@ while True:
 
     # for each result page, loop through download links and save to your computer
     for link_data in response_json['download_links']:
-        print(f'Downloading file {link_data['file_name']}...')
+        print(f"Downloading file {link_data['file_name']}...")
         data = requests.get(link_data['link'])
         with open(link_data['file_name'], 'wb') as file:
             file.write(data.content)
@@ -147,7 +147,7 @@ while True:
 
     # for each result page, loop through download links and save to your computer
     for link_data in response_json['download_links']:
-        print(f'Downloading file {link_data['file_name']}...')
+        print(f"Downloading file {link_data['file_name']}...")
         data = requests.get(link_data['link'])
         with open(link_data['file_name'], 'wb') as file:
             file.write(data.content)
