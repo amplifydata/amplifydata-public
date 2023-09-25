@@ -32,7 +32,7 @@ print(results.json())
 
 #### API Parameters:
 
-- `page`: Pagination parameter for the page offset number to retrieve the files for maximum of 1000 files per page, defaulted to 1.
+- `page`: Page number (API will return maximum of 1000 files per page), defaulted to 1
 - `partition_key_after`: Filtering parameter to retrieve all files after the specified partition_key, inclusive
 - `partition_key_before`: Filtering parameter to retrieve all files before the specified partition_key, inclusive
 
