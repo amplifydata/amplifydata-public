@@ -42,6 +42,8 @@ print(results.json())
     "download_links": [{
         "link": str, # downloadable link
         "partition_key": str, # the partition str used to partition the links. Can be used for filtering, example provided below. Will be None if no file partitioning set
+        "file_name": str, # name of file
+        "file_extension": str # .csv or .csv.gz - indicating if files are compressed.  Larger products will be delivered via compressed files
     }], # list of downloadable links and partition_keys
     "page": int, # defaulted to 1, the page offset number to retrieve the links for maximum of 1000 links per page
     "number_of_files_for_page": int, # num of files for page after filter and pagination
@@ -73,7 +75,7 @@ results = requests.get(url=PRODUCT_API_PATH,
 for i, link_data in enumerate(results.json()["download_links"]):
     print(f"Downloading file {i}...")
     data = requests.get(link_data["link"])
-    open(f'file-{i}.csv.gz', 'wb').write(data.content)
+    open(link_data["file_name"], 'wb').write(data.content)
 
 ```
 
@@ -100,16 +102,9 @@ while True:
 
     # for each result page, loop through download links and save to your computer
     for link_data in response_json['download_links']:
-        # create file name for each link
-        if response_json['partition_column']:
-            file_name = f"file-{download_count+1}-{response_json['partition_column']}-{link_data['partition_key']}.csv.gz"
-        else:
-            file_name = f"file-{download_count+1}.csv.gz"
-        print(f'Downloading file {file_name}...')
-
-        # loop through download links and save to your computer
+        print(f'Downloading file {link_data['file_name']}...')
         data = requests.get(link_data['link'])
-        with open(file_name, 'wb') as file:
+        with open(link_data['file_name'], 'wb') as file:
             file.write(data.content)
         download_count += 1
 
@@ -152,16 +147,9 @@ while True:
 
     # for each result page, loop through download links and save to your computer
     for link_data in response_json['download_links']:
-        # create file name for each link
-        if response_json['partition_column']:
-            file_name = f"file-{download_count+1}-{response_json['partition_column']}-{link_data['partition_key']}.csv.gz"
-        else:
-            file_name = f"file-{download_count+1}.csv.gz"
-        print(f'Downloading file {file_name}...')
-
-        # loop through download links and save to your computer
+        print(f'Downloading file {link_data['file_name']}...')
         data = requests.get(link_data['link'])
-        with open(file_name, 'wb') as file:
+        with open(link_data['file_name'], 'wb') as file:
             file.write(data.content)
         download_count += 1
 
