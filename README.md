@@ -58,7 +58,7 @@ print(results.json())
 
 #### API Parameters:
 
-- `page`: Page number (API will return maximum of 1000 files per page), defaulted to 1
+- `page`: Page number (API will return maximum of 500 files per page), defaulted to 1
 - `partition_key_after`: Filtering parameter to retrieve all files after the specified partition_key, inclusive
 - `partition_key_before`: Filtering parameter to retrieve all files before the specified partition_key, inclusive
 
@@ -83,7 +83,7 @@ print(results.json())
     "expires_at": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" # UTC datetime
 }
 ```
-#### Download first page of files (up to 1000 files)
+#### Download first page of files (up to 500 files)
 ```python
 # import requests library to call API endpoint
 import requests
