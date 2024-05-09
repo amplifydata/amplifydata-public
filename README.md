@@ -60,7 +60,7 @@ print(results.json())
 {
     "items": [{
       "table_name": str
-    }], # list of table names for the multi-table product
+    }], # list of table names from the multi-table product
     "page": int, # page number of the response
     "requested_page_size": int, # number of items returned for each page
     "number_of_items_for_page": int, # number of items returned for the current page
