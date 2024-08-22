@@ -48,6 +48,7 @@ page = 1
 download_count = 0
 while True:
     # get results from API endpoint, using API key for authentication
+    print(f"Gettings files from page {page}")
     results = make_request(url=PRODUCT_API_PATH,
                            params={'page': page,
                                    'table_name': TABLE_NAME
