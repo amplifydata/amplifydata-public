@@ -46,13 +46,10 @@ def make_request(
 page = 1
 download_count = 0
 while True:
-    # get results from API endpoint, using API key for authentication
+    # get results from API endpoint, using API key for authentication, for a specific page
     print(f"Gettings files from page {page}")
     results = make_request(url=PRODUCT_API_PATH,
-                           params={'page': page,
-                                   'partition_key_after': <'YYYY-MM-DD'>,   # set date value here
-                                   'partition_key_before': <'YYYY-MM-DD'>} # set date value here
-                           )
+                           params={'page': page})
     response_json = results.json()
 
     # for each result page, loop through download links and save to your computer
